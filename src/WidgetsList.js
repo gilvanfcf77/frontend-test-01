@@ -17,6 +17,23 @@ class WidgetsList extends React.Component {
 
   }
 
+  changeTitle = () =>{
+    this.title = document.getElementById("title").value;
+    this.setState({
+      title: this.state.title
+    });
+
+    this.options = {
+      title: {
+        text: this.title
+      },
+      series: [{
+        data: this.state.list
+      }]
+    }
+
+  }
+
   addItem = () =>{
     this.newItem = document.getElementById("value").value;
 
@@ -35,28 +52,12 @@ class WidgetsList extends React.Component {
     }
   }
 
-  changeTitle = () =>{
-    this.title = document.getElementById("title").value;
-    this.setState({
-      title: this.state.title
-    });
-
-    this.options = {
-      title: {
-        text: this.title
-      },
-      series: [{
-        data: this.state.list
-      }]
-    }
-
-  }
   render(){
 
     return(
       <div>
-        <Button onClick = { this.addItem }>Adicionar valor</Button>
         <Button onClick = { this.changeTitle }>Mudar título</Button>
+        <Button onClick = { this.addItem }>Adicionar valor</Button>
 
         <HighchartsReact
           highcharts={Highcharts}

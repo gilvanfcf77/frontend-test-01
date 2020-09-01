@@ -12,7 +12,7 @@ const Main = () => <div>
     <Form>
       <Form.Group as={Row}>
         <Form.Label column sm={2}>
-          Título do widget:
+          Título do gráfico:
         </Form.Label>
         <Col>
           <Form.Control type="name" placeholder="Título" id="title"/>
@@ -24,7 +24,7 @@ const Main = () => <div>
           Adicionar valor:
         </Form.Label>
         <Col>
-          <Form.Control type="number" placeholder="Número" id="value"/>
+          <Form.Control type="number" placeholder="0" id="value"/>
         </Col>
       </Form.Group>
 
